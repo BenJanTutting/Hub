@@ -1,6 +1,6 @@
 function OpenLink(link)
 {
-    window.location=link;
+    window.location = link;
 }
 
 async function GetWeatherInfo(cityID)
