@@ -17,33 +17,39 @@ body {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
-    font-family: 'Cascadia Mono', 'Fantasque Sans Mono', monospace;
+}
+
+.menu button {
+    display: block;
+    position: relative;
+    font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 5px;
-}
-
-.menu div {
-    display: block;
-    position: relative;
+    font-size: 18px;
+    font-weight: 0;
     overflow: hidden;
     cursor: pointer;
     transition: .35s;
     margin: 0 25%; /*top-bottom, left-right*/
     padding: 45px;
     color: #E3F2FD;
+    background-color: transparent;
+    border: none;
+    width: 50%;
+    border-radius: 0;
 }
 
-.menu div:hover{
+.menu button:hover{
     color: #263238;
 }
 
-.menu div:hover::after {
+.menu button:hover::after {
     left: -10%;
     width: 120%;
 }
 
-.menu div::after {
+.menu button::after {
     position: absolute;
     transition: .35s;
     content: ' ';
@@ -53,4 +59,9 @@ body {
     left: -10%;
     z-index: -1;
     background: #64B5F6;
+}
+
+.menu button:focus {
+    outline-style: dotted;
+    outline-color: #4B87B7;
 }
