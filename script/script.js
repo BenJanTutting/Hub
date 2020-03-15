@@ -11,7 +11,7 @@ async function GetWeatherInfo(cityID)
     await fetch(url)
     .then(function(resp) { return resp.json() })
     .then(function(data) {
-        document.getElementById("PasvalysCity").innerText = `${data.name} ${(data.main.temp - 273.15)} C`;
-        console.log(data)
+        document.getElementById("City1").innerText = `${data.name} ${(data.main.temp - 273.15)} C`;
+        console.log(data);
     });
 }
