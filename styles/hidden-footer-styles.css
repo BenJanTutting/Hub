@@ -1,4 +1,7 @@
 footer {
+    display: grid;
+    grid-template-columns: 1fr, 2fr, 1fr;
+
     font-family: 'Cascadia Mono', 'Fantasque Sans Mono', monospace;
     text-transform: uppercase;
     letter-spacing: 5px;
@@ -16,7 +19,45 @@ footer {
     height: 280px;
 }
 
-h1 {
-    color: #CFD8DC;
+footer > button {
+    background-color: #546E7A;
+    width: 50%;
+    height: 100px;
+    border-radius: 0;
+    border: none;
+    box-shadow: 0 0 20px 1px #050505;
+    margin: auto 25%; /*top-bottom, left-right*/
+    font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
     text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 16px;
+    color: #E3F2FD;
+}
+
+footer > button:hover {
+    transition: 0.35s;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+footer > button:focus {
+    outline: none;
+    background: #263238;
+    width: default;
+}
+
+#homeButtonInFooter{
+    grid-row: 1/2;
+    grid-column: 1/2;
+}
+
+#apiButtonInFooter{
+    grid-row: 1/2;
+    grid-column: 2/3;
+}
+
+#linkedinButtonInFooter{
+    grid-row: 1/2;
+    grid-column: 3/4;
 }

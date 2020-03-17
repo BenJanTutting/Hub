@@ -2,72 +2,79 @@
     <head>
         <meta charset="utf-8">
         <script src="../script\script.js"></script>
+
         <link rel="stylesheet" href="../styles/weather-styles.css">
         <link rel="stylesheet" href="../styles/index-styles.css">
+        <link rel="stylesheet" href="../styles/hidden-footer-styles.css">
         
         <link rel="icon" type="image/png" href="../favicon-32x32.png" sizes="32x32"/>
         <title>Weather</title>
     </head>
     <body>
         <div class="content">
-            <button id="palanga">
+            <button id="palanga" onclick="ShowWeatherModal(this.innerText)">
                 Palanga
             </button>
-            <button id="siauliai">
+            <button id="siauliai" onclick="ShowWeatherModal(this.innerText)">
                 Šiauliai
             </button>
-            <button id="panevezys">
+            <button id="panevezys" onclick="ShowWeatherModal(this.innerText)">
                 Panevėžys
             </button>
-            <button id="rokiskis">
+            <button id="rokiskis" onclick="ShowWeatherModal(this.innerText)">
                 Rokiškis
             </button>
-            <button id="ignalina">
+            <button id="ignalina" onclick="ShowWeatherModal(this.innerText)">
                 Ignalina
             </button>
-            <button id="klaipeda">
+            <button id="klaipeda" onclick="ShowWeatherModal(this.innerText)">
                 Klaipėda
             </button>
-            <button id="kelme">
+            <button id="kelme" onclick="ShowWeatherModal(this.innerText)">
                 Kelmė
             </button>
-            <button id="kedainiai">
+            <button id="kedainiai" onclick="ShowWeatherModal(this.innerText)">
                 Kėdainiai
             </button>
-            <button id="moletai">
+            <button id="moletai" onclick="ShowWeatherModal(this.innerText)">
                 Moletai
             </button>
-            <button id="silute">
+            <button id="silute" onclick="ShowWeatherModal(this.innerText)">
                 Šilutė
             </button>
-            <button id="jurbarkas">
+            <button id="jurbarkas" onclick="ShowWeatherModal(this.innerText)">
                 Jurbarkas
             </button>
-            <button id="kaunas">
+            <button id="kaunas" onclick="ShowWeatherModal(this.innerText)">
                 Kaunas
             </button>
-            <button id="vilnius">
+            <button id="vilnius" onclick="ShowWeatherModal(this.innerText)">
                 Vilnius
             </button>
-            <button id="druskininkai">
+            <button id="druskininkai" onclick="ShowWeatherModal(this.innerText)">
                 Druskininkai
             </button>
         </div>
+
+        <div class="modal" id="singleCityWeatherModal">
+            <img id="weatherIcon">
+            <div id="temperature"></div>
+            <div id="description"></div>
+            <div id="location"></div>
+        </div>
+        <div id="overlay" onclick="CloseModal()"></div>
+
         <div class="fake-footer"></div>
         <footer>
-            <h1>bet ya didnt expect a hidden footer eh? :> (not finished yet lol)</h1>
+            <button id="homeButtonInFooter" onclick="OpenLink('index.html')">
+                Home
+            </button>
+            <button id="apiButtonInFooter" onclick="OpenLink('https://openweathermap.org/api')">
+                Open Weather Map API
+            </button>
+            <button id="linkedinButtonInFooter" onclick="OpenLink('https://www.linkedin.com/in/benas-janušonis-6132a5191/')">
+                LinkedIn
+            </button>
         </footer>
-                <!--<button onclick="OpenLink('index.html')">
-                    Home
-                </button>
-                <button onclick="GetWeatherInfo('593116')">
-                    TestWeather
-                </button>
-                <button id="City1">
-                    --weather info--
-                </button>
-                <button>
-                    weather work in progress...
-                </button>-->
     </body>
 </html>

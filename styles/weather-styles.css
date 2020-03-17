@@ -1,12 +1,15 @@
 .content {
     background: linear-gradient(360deg, #1A237E 0%, #1E88E5 100%);
     display: grid;
+    gap: 5px;
     grid-template-columns: repeat(9, 1fr);
     grid-template-rows: repeat(8, 100px);
     grid-auto-rows:minmax(auto, 200px);
-    gap: 1em;
-    padding: 1em;
+    position: relative;
+    padding: 2em 5em;
     justify-items: stretch;
+    box-shadow: 0 0 20px 1px #050505;
+    z-index: 2;
 }
 
 .content > button {
@@ -17,51 +20,23 @@
     font-size: 16px;
     transition: 0.2s;
     position: relative;
-    box-shadow: 0 0 8px 0px #050505;
     color: white;
-    background-color: #006064;
-    border-radius: 5px;
-    animation: Slide_Up 0.5s ease;
-    border: none;
+    background-color: #00695C;
+    border: 5px #004D40 solid;
 }
 
 .content > button:hover {
-    background-color: #0097A7;
+    animation: Add_Shadow 0.35s ease forwards;
+    transition: 0.35s;
     cursor: pointer;
-    left: -2%;
-    top: -2%;
-    width: 104%;
-    height: 104%;
-    font-size: 104%;
-}
-
-.content button::after {
-    position: absolute;
-    content: ' ';
-    width: 0;
-    top: 0;
-    height: 100%;
-    left: -10%;
-    z-index: 2;
-    background: #64B5F6;
+    background-color: #004D40;
+    box-shadow: none;
+    z-index: 3;
 }
 
 .content > button:focus {
-    background-color: #00838F;
-    outline: none;
-}
-
-@keyframes Slide_Up {
-    0% {
-        top: 50px;
-        opacity: 0.1;
-        fade: translateY(500px);
-    }
-    100% {
-        top: 0;
-        opacity: 1;
-        transform: translateY(0);
-    }
+    outline: dotted;
+    outline-width: 1px;
 }
 
 #palanga {
@@ -132,4 +107,57 @@
 #druskininkai {
     grid-row: 7/9;
     grid-column: 5/7;
+}
+
+.modal {
+    padding: 50px 25px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 0.35s;
+    background-color: #00695C;
+    border: 5px #004D40 solid;
+    border-radius: 5px;
+    z-index: 10;
+    width: 500px;
+    max-width: 80%;
+}
+
+.modal.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.modal > div {
+    font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 18px;
+    color: white;
+    margin-top: 25px;
+}
+
+.modal > img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 5;
+}
+
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
 }
