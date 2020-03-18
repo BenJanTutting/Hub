@@ -110,6 +110,12 @@
 }
 
 .modal {
+    font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 18px;
+    color: white;
     padding: 50px 25px;
     position: fixed;
     top: 50%;
@@ -129,20 +135,15 @@
 }
 
 .modal > div {
-    font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    font-size: 18px;
-    color: white;
-    margin-top: 25px;
+    margin: 25px 0;
 }
 
 .modal > img {
     display: block;
+    width: 180px;
+    height: 180px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 50px;
 }
 
 #overlay {

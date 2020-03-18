@@ -12,7 +12,7 @@
     </head>
     <body>
         <div class="content">
-            <button id="palanga" onclick="ShowWeatherModal(this.innerText)">
+            <button id="palanga" onclick="ShowWeatherModal(this.id)">
                 Palanga
             </button>
             <button id="siauliai" onclick="ShowWeatherModal(this.innerText)">
@@ -58,23 +58,28 @@
 
         <div class="modal" id="singleCityWeatherModal">
             <img id="weatherIcon">
-            <div id="temperature"></div>
             <div id="description"></div>
+            <div id="temperature"></div>
+            <div id="feelsLikeTemperature"></div>
+            <div id="wind"></div>
             <div id="location"></div>
         </div>
+        <div class="modal" id="errorModal"></div>
         <div id="overlay" onclick="CloseModal()"></div>
 
         <div class="fake-footer"></div>
         <footer>
-            <button id="homeButtonInFooter" onclick="OpenLink('../index.html')">
-                Home
-            </button>
-            <button id="apiButtonInFooter" onclick="OpenLink('https://openweathermap.org/api')">
-                Open Weather Map API
-            </button>
-            <button id="linkedinButtonInFooter" onclick="OpenLink('https://www.linkedin.com/in/benas-janušonis-6132a5191/')">
-                LinkedIn
-            </button>
+            <div class="footerContainer">
+                <a href="https://openweathermap.org/api">
+                    Open Weather Map API
+                </a>
+                <a href="../index.html">
+                    Home
+                </a>
+                <a href="https://github.com/manifestinteractive/weather-underground-icons">
+                    Weather Icons
+                </a>
+            </div>
         </footer>
     </body>
 </html>
