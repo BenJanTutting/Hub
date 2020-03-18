@@ -18,7 +18,7 @@ body {
     transform: translateY(-50%);
 }
 
-.menu > a {
+.menu button {
     display: block;
     position: relative;
     font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -26,31 +26,29 @@ body {
     text-transform: uppercase;
     letter-spacing: 5px;
     font-size: 18px;
-    text-decoration: none;
     overflow: hidden;
     cursor: pointer;
     transition: .35s;
+    margin: 0 25%; /*top-bottom, left-right*/
     padding: 45px;
-    left: 50%;
-    transform: translate(-50%);
     color: #E3F2FD;
     background-color: transparent;
+    border: none;
     width: 50%;
+    border-radius: 0;
     animation: fade-in 0.5s ease-in;
 }
 
-.menu > a:hover{
+.menu button:hover{
     color: #263238;
-    text-decoration: none;
 }
 
-.menu > a:hover::after {
+.menu button:hover::after {
     left: -10%;
     width: 120%;
-    text-decoration: none;
 }
 
-.menu > a::after {
+.menu button::after {
     position: absolute;
     transition: .35s;
     content: ' ';
@@ -60,13 +58,11 @@ body {
     left: -10%;
     z-index: -1;
     background: #64B5F6;
-    text-decoration: none;
 }
 
-.menu a:focus {
+.menu button:focus {
     outline-style: dotted;
     outline-color: #4B87B7;
-    text-decoration: none;
 }
 
 @keyframes fade-in {
