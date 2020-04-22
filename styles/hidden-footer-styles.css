@@ -20,17 +20,21 @@ footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 5em;
-    margin-left: 4em;
-    margin-right: 4em;
-    margin-top: 140px;
-    transform: translate(0, -50%);
+    margin-left: 5em;
+    margin-right: 5em;
+    transform: translateY(-50%);
 }
 
 .footerContainer > a {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 280px;
     display: block;
-    padding-top: 3em;
-    padding-bottom: 3em;
     width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    max-width: 350px;
     background-color: #546E7A;
     font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
     text-transform: uppercase;
@@ -55,4 +59,32 @@ footer {
     color: #E3F2FD;
     width: default;
     text-decoration: none;
+}
+
+@media all and (max-width: 700px)
+{
+    .footerContainer {
+        margin-left: 3em;
+        margin-right: 3em;
+        gap: 3em;
+    }
+
+    .footerContainer > a {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+}
+
+@media all and (max-width: 570px)
+{
+    .footerContainer {
+        margin-left: 1em;
+        margin-right: 1em;
+        gap: 1em;
+    }
+
+    .footerContainer > a {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
 }

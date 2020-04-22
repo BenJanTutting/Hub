@@ -1,7 +1,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <script src="../script\script.js"></script>
+        <script src="../script/weather script.js"></script>
 
         <link rel="stylesheet" href="../styles/weather-styles.css">
         <link rel="stylesheet" href="../styles/index-styles.css">
@@ -11,49 +11,51 @@
         <title>Weather</title>
     </head>
     <body>
-        <div class="content">
-            <button id="palanga" onclick="ShowWeatherModal(this.innerText)">
-                Palanga
-            </button>
-            <button id="siauliai" onclick="ShowWeatherModal(this.innerText)">
-                Šiauliai
-            </button>
-            <button id="panevezys" onclick="ShowWeatherModal(this.innerText)">
-                Panevėžys
-            </button>
-            <button id="rokiskis" onclick="ShowWeatherModal(this.innerText)">
-                Rokiškis
-            </button>
-            <button id="ignalina" onclick="ShowWeatherModal(this.innerText)">
-                Ignalina
-            </button>
-            <button id="klaipeda" onclick="ShowWeatherModal(this.innerText)">
-                Klaipėda
-            </button>
-            <button id="kelme" onclick="ShowWeatherModal(this.innerText)">
-                Kelmė
-            </button>
-            <button id="kedainiai" onclick="ShowWeatherModal(this.innerText)">
-                Kėdainiai
-            </button>
-            <button id="moletai" onclick="ShowWeatherModal(this.innerText)">
-                Molėtai
-            </button>
-            <button id="silute" onclick="ShowWeatherModal(this.innerText)">
-                Šilutė
-            </button>
-            <button id="jurbarkas" onclick="ShowWeatherModal(this.innerText)">
-                Jurbarkas
-            </button>
-            <button id="kaunas" onclick="ShowWeatherModal(this.innerText)">
-                Kaunas
-            </button>
-            <button id="vilnius" onclick="ShowWeatherModal(this.innerText)">
-                Vilnius
-            </button>
-            <button id="druskininkai" onclick="ShowWeatherModal(this.innerText)">
-                Druskininkai
-            </button>
+        <div class="background">
+            <div class="content">
+                <button id="palanga" onclick="ShowWeatherModal(this.innerText)">
+                    Palanga
+                </button>
+                <button id="siauliai" onclick="ShowWeatherModal(this.innerText)">
+                    Šiauliai
+                </button>
+                <button id="panevezys" onclick="ShowWeatherModal(this.innerText)">
+                    Panevėžys
+                </button>
+                <button id="rokiskis" onclick="ShowWeatherModal(this.innerText)">
+                    Rokiškis
+                </button>
+                <button id="ignalina" onclick="ShowWeatherModal(this.innerText)">
+                    Ignalina
+                </button>
+                <button id="klaipeda" onclick="ShowWeatherModal(this.innerText)">
+                    Klaipėda
+                </button>
+                <button id="kelme" onclick="ShowWeatherModal(this.innerText)">
+                    Kelmė
+                </button>
+                <button id="kedainiai" onclick="ShowWeatherModal(this.innerText)">
+                    Kėdainiai
+                </button>
+                <button id="moletai" onclick="ShowWeatherModal(this.innerText)">
+                    Molėtai
+                </button>
+                <button id="silute" onclick="ShowWeatherModal(this.innerText)">
+                    Šilutė
+                </button>
+                <button id="jurbarkas" onclick="ShowWeatherModal(this.innerText)">
+                    Jurbarkas
+                </button>
+                <button id="kaunas" onclick="ShowWeatherModal(this.innerText)">
+                    Kaunas
+                </button>
+                <button id="vilnius" onclick="ShowWeatherModal(this.innerText)">
+                    Vilnius
+                </button>
+                <button id="druskininkai" onclick="ShowWeatherModal(this.innerText)">
+                    Druski<wbr>ninkai
+                </button>
+            </div>
         </div>
 
         <div class="modal" id="singleCityWeatherModal">
@@ -71,7 +73,7 @@
         <footer>
             <div class="footerContainer">
                 <a href="https://openweathermap.org/api">
-                    Open Weather Map API
+                    Weather API
                 </a>
                 <a href="../index.html">
                     Home
