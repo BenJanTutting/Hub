@@ -63,7 +63,7 @@ function FormatWindData(weatherData)
     if(degrees <= 247.5) return `↗ ${windSpeed} m/s`;
     if(degrees <= 292.5) return `↑ ${windSpeed} m/s`;
     if(degrees <= 337.5) return `↖ ${windSpeed} m/s`;
-    else return `${windSpeed} m/s`; //in case wind direction is not received from api
+    else return `${windSpeed} m/s`; //in case wind direction is not received from the API
 }
 
 function OpenModal(modalID)
