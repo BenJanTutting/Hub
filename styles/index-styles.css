@@ -65,7 +65,7 @@ body {
 }
 
 .menu a:focus {
-    outline-style: dotted;
+    outline-style: solid;
     outline-color: #4B87B7;
     text-decoration: none;
 }
