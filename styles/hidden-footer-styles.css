@@ -26,6 +26,7 @@ footer {
 }
 
 .footerContainer > a {
+    transition: 0.2s;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
