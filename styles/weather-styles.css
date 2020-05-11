@@ -1,9 +1,11 @@
+@import "root-variables.css";
+
 .background {
     background: linear-gradient(360deg, #1A237E 0%, #1E88E5 100%);
     min-height: 100vh;
     z-index: 2;
     position: relative;
-    box-shadow: 0 0 20px 1px #050505;
+    box-shadow: 0 0 20px 1px var(--shadow);
 }
 
 .content {
@@ -26,23 +28,23 @@
     font-size: 16px;
     transition: 0.2s;
     position: relative;
-    color: white;
-    background-color: #00695C;
-    border: 5px #004D40 solid;
+    color: var(--weather-button-text-color);
+    background-color: var(--weather-button-background-color);
+    border: 5px var(--weather-button-border-color) solid;
 }
 
 .content > button:hover {
     animation: Add_Shadow 0.35s ease forwards;
     transition: 0.35s;
     cursor: pointer;
-    background-color: #004D40;
+    background-color: var(--weather-button-border-color);
     box-shadow: none;
     z-index: 3;
 }
 
 .content > button:focus {
     outline: none;
-    background-color: #004D40;
+    background-color: var(--weather-button-border-color);
 }
 
 #palanga {
@@ -195,15 +197,15 @@
     text-transform: uppercase;
     letter-spacing: 5px;
     font-size: 18px;
-    color: white;
+    color: var(--weather-button-text-color);
     padding: 50px 25px;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0);
     transition: 0.35s;
-    background-color: #00695C;
-    border: 5px #004D40 solid;
+    background-color: var(--weather-button-background-color);
+    border: 5px var(--weather-button-border-color) solid;
     border-radius: 5px;
     z-index: 10;
     width: 500px;

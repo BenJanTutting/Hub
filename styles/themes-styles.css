@@ -1,0 +1,94 @@
+@import "root-variables.css";
+
+.ocean-button {
+    background-color: #283593;
+    color: #E3F2FD;
+}
+
+.ocean-button:hover{
+    color: #263238;
+}
+
+.ocean-button::after{
+    background-color: #64B5F6;
+}
+
+
+.light-button {
+    background-color: #FAFAFA;
+    color: #161616;
+}
+
+.light-button::after {
+    background-color: #BDBDBD;
+}
+
+.dark-button{
+    background-color: #37474F;
+    color:FAFAFA;
+}
+
+.dark-button::after {
+    background-color: #212121;
+}
+
+button {
+    display: block;
+    position: relative;
+    font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 18px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .35s;
+    padding: 45px;
+    margin-bottom: 10px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 600px;
+    max-width: 50%;
+    border: none;
+    animation: fade-in 0.5s ease-in;
+}
+
+button:hover::after {
+    left: -10%;
+    width: 120%;
+}
+
+button::after {
+    position: absolute;
+    transition: .35s;
+    content: ' ';
+    width: 0;
+    top: 0;
+    height: 100%;
+    left: -10%;
+    z-index: -1;
+}
+
+button:focus {
+    outline-style: none;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
