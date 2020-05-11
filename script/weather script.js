@@ -82,6 +82,6 @@ function CloseModal()
     let errorModal = document.getElementById('errorModal');
 
     overlay.classList.remove('active');
-    if(weatherModal.classList.contains('active')) weatherModal.classList.remove('active');
-    if(errorModal.classList.contains('active')) errorModal.classList.remove('active');
+    weatherModal.classList.remove('active');
+    errorModal.classList.remove('active');
 }
