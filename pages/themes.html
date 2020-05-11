@@ -11,22 +11,33 @@
         <link rel="icon" type="image/png" href="../favicon-32x32.png" sizes="32x32"/>
         <title>Themes</title>
     </head>
-    <body>
+    <body onload="ChangeTheme()">
         <div class="all-content">
             <div class="menu">
-                <button class="dark-button" onclick="ChangeTheme('dark')">
-                    Dark
-                </button>
-                <button class="light-button" onclick="ChangeTheme('light')">
-                    Light
-                </button>
-                <button class="ocean-button" onclick="ChangeTheme('ocean')">
+                <button class="ocean-button" onclick="SetTheme('ocean')">
                     Ocean
                 </button>
+                <button class="dark-button" onclick="SetTheme('dark')">
+                    Dark
+                </button>
+                <button class="light-button" onclick="SetTheme('light')">
+                    Light
+                </button>
+            </div>
+        </div>
+        <div class="fake-footer"></div>
+        <footer>
+            <div class="footerContainer">
                 <a href="../index.html">
                     Home
                 </a>
+                <a href="weather.html">
+                    Weather
+                </a>
+                <a href="info page.html">
+                    About
+                </a>
             </div>
-        </div>
+        </footer>
     </body>
 </html>

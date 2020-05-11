@@ -1,75 +1,77 @@
-const oceanBackgroundDarkerShade = '#1A237E';
-const oceanBackgroundLighterShade = '#1E88E5';
-const oceanButtonText = '#E3F2FD';
-const oceanButtonHover = '#64B5F6';
-const oceanButtonFocusOutline = '#4B87B7';
-const oceanFooterBackground = '#263238';
-const oceanFooterButtonBackground = '#546E7A';
-const oceanWeatherButtonBackgroundColor = '#00695C';
-const oceanWeatherButtonBorderColor = '#004D40';
-const oceanWeatherButtonTextColor = '#ffffff';
+const ThemeFields = [
+    '--background-darker-shade',
+    '--background-lighter-shade',
+    '--button-text',
+    '--button-hover-text',
+    '--button-hover',
+    '--button-focus-outline',
+    '--footer-background',
+    '--footer-button-background',
+    '--weather-button-background-color',
+    '--weather-button-border-color',
+    '--weather-button-text-color'
+]
 
-const darkBackgroundDarkerShade = '#1A237E';
-const darkBackgroundLighterShade = '#1E88E5';
-const darkButtonText = '#E3F2FD';
-const darkButtonHover = '#64B5F6';
-const darkButtonFocusOutline = '#4B87B7';
-const darkFooterBackground = '#263238';
-const darkFooterButtonBackground = '#546E7A';
-const darkWeatherButtonBackgroundColor = '#00695C';
-const darkWeatherButtonBorderColor = '#004D40';
-const darkWeatherButtonTextColor = '#ffffff';
-
-const whiteBackgroundDarkerShade = '#1A237E';
-const whiteBackgroundLighterShade = '#1E88E5';
-const whiteButtonText = '#E3F2FD';
-const whiteButtonHover = '#64B5F6';
-const whiteButtonFocusOutline = '#4B87B7';
-const whiteFooterBackground = '#263238';
-const whiteFooterButtonBackground = '#546E7A';
-const whiteWeatherButtonBackgroundColor = '#00695C';
-const whiteWeatherButtonBorderColor = '#004D40';
-const whiteWeatherButtonTextColor = '#ffffff';
-
-function ChangeTheme(theme)
+function SetTheme(theme)
 {
-    if(theme == 'ocean')
+    window.sessionStorage.clear();
+    window.sessionStorage.setItem('theme', theme);
+    ChangeTheme();
+}
+
+function ChangeTheme()
+{
+    let colors;
+
+    switch(window.sessionStorage.getItem('theme'))
     {
-        document.documentElement.style.setProperty('--background-darker-shade', oceanBackgroundDarkerShade);
-        document.documentElement.style.setProperty('--background-lighter-shade', oceanBackgroundLighterShade);
-        document.documentElement.style.setProperty('--button-text', oceanButtonText);
-        document.documentElement.style.setProperty('--button-hover', oceanButtonHover);
-        document.documentElement.style.setProperty('--button-focus-outline', oceanButtonFocusOutline);
-        document.documentElement.style.setProperty('--footer-background', oceanFooterBackground);
-        document.documentElement.style.setProperty('--footer-button-background', oceanFooterButtonBackground);
-        document.documentElement.style.setProperty('--weather-button-background-color', oceanWeatherButtonBackgroundColor);
-        document.documentElement.style.setProperty('--weather-button-border-color', oceanWeatherButtonBorderColor);
-        document.documentElement.style.setProperty('--weather-button-text-color', oceanWeatherButtonTextColor);
+        case 'dark':
+            colors = 
+            ['161616','424242','E3F2FD','E3F2FD','161616','161616',
+            '101010','263238','2E7D32','1B5E20','000000'];
+            SetThemeToPage(colors);
+            AddInversionToArrow();
+            break;
+        case 'light':
+            colors = 
+            ['81D4FA','BDBDBD','212121','161616','ffffff','2196F3',
+            '304FFE','C5CAE9','00838F','006064', 'ffffff'];
+            SetThemeToPage(colors);
+            RemoveInversionFromArrow();
+            break;
+        default:
+            colors = 
+            ['1A237E','1E88E5','E3F2FD','263238','64B5F6','4B87B7',
+            '263238','546E7A','00695C','004D40','ffffff'];
+            SetThemeToPage(colors);
+            AddInversionToArrow();
     }
-    if(theme == 'dark')
+}
+
+function SetThemeToPage(arrayOfValues)
+{
+    const root = document.documentElement.style;
+    
+    for(var i = 0; i < arrayOfValues.length; i++)
     {
-        document.documentElement.style.setProperty('--background-darker-shade', darkBackgroundDarkerShade);
-        document.documentElement.style.setProperty('--background-lighter-shade', darkBackgroundLighterShade);
-        document.documentElement.style.setProperty('--button-text', darkButtonText);
-        document.documentElement.style.setProperty('--button-hover', darkButtonHover);
-        document.documentElement.style.setProperty('--button-focus-outline', '');
-        document.documentElement.style.setProperty('--footer-background', '');
-        document.documentElement.style.setProperty('--footer-button-background', '');
-        document.documentElement.style.setProperty('--weather-button-background-color', '');
-        document.documentElement.style.setProperty('--weather-button-border-color', '');
-        document.documentElement.style.setProperty('--weather-button-text-color', '');
+        root.setProperty(ThemeFields[i], `#${arrayOfValues[i]}`);
     }
-    if(theme == 'white')
+}
+
+function AddInversionToArrow()
+{
+    let arrow = document.getElementById('scrollArrow');
+    if(!arrow.classList.contains('inverted'))
     {
-        document.documentElement.style.setProperty('--background-darker-shade', '');
-        document.documentElement.style.setProperty('--background-lighter-shade', '');
-        document.documentElement.style.setProperty('--button-text', '');
-        document.documentElement.style.setProperty('--button-hover', '');
-        document.documentElement.style.setProperty('--button-focus-outline', '');
-        document.documentElement.style.setProperty('--footer-background', '');
-        document.documentElement.style.setProperty('--footer-button-background', '');
-        document.documentElement.style.setProperty('--weather-button-background-color', '');
-        document.documentElement.style.setProperty('--weather-button-border-color', '');
-        document.documentElement.style.setProperty('--weather-button-text-color', '');
+        arrow.classList.add('inverted');
+    }
+}
+
+function RemoveInversionFromArrow()
+{
+    let arrow = document.getElementById('scrollArrow');
+    if(arrow.classList.contains('inverted'))
+    {
+        arrow.classList.remove('inverted');
     }
 }

@@ -2,6 +2,7 @@
     <head>
         <meta charset="utf-8">
         <script src="../script/weather script.js"></script>
+        <script src="../script/themes script.js"></script>
 
         <link rel="stylesheet" href="../styles/weather-styles.css">
         <link rel="stylesheet" href="../styles/index-styles.css">
@@ -10,7 +11,7 @@
         <link rel="icon" type="image/png" href="../favicon-32x32.png" sizes="32x32"/>
         <title>Weather</title>
     </head>
-    <body>
+    <body onload="ChangeTheme()">
         <div class="background">
             <div class="content">
                 <button id="palanga" onclick="ShowWeatherModal(this.innerText)">

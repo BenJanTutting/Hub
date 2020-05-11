@@ -1,7 +1,8 @@
 @import "root-variables.css";
 
 .background {
-    background: linear-gradient(360deg, #1A237E 0%, #1E88E5 100%);
+    background: linear-gradient(360deg, var(--background-darker-shade) 0%,
+    var(--background-lighter-shade) 100%);
     min-height: 100vh;
     z-index: 2;
     position: relative;

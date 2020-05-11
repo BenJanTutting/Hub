@@ -44,7 +44,7 @@ body {
 }
 
 .menu > a:hover{
-    color: var(--footer-background);
+    color: var(--button-hover-text);
     text-decoration: none;
 }
 
@@ -96,9 +96,12 @@ body {
 .scrollDownArrow{
     height: 50px;
     width: 50px;
-    filter: invert(1);
     margin-left: 50%;
     transform: translate(-50%, 100px);
+}
+
+.inverted {
+    filter: invert(1);
 }
 
 .scrollDownArrow.hidden {

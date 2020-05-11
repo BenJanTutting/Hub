@@ -1,16 +1,19 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <script src="script/index script.js"></script>
+        <script src="script/themes script.js"></script>
+
         <link rel="stylesheet" href="styles/index-styles.css">
         <link rel="stylesheet" href="styles/hidden-footer-styles.css">
-        <script src="script/index script.js"></script>
+
         <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32"/>
         <title>Hub</title>
     </head>
-    <body>
+    <body onload="ChangeTheme()">
         <div class="all-content" id="allContent">
             <div class="menu">
-                <a>
+                <a href="pages/info page.html">
                     What is this?
                 </a>
                 <a href="pages/themes.html">
@@ -19,7 +22,7 @@
                 <a href="pages/weather.html">
                     Enter Weather
                 </a>
-                <img src="Scroll down.png" class="scrollDownArrow" id="scrollArrow">
+                <img src="Scroll down.png" class="scrollDownArrow inverted" id="scrollArrow">
             </div>
         </div>
         <div class="fake-footer"></div>
