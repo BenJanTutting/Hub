@@ -1,14 +1,14 @@
 :root {
-    --background-darker-shade: #1A237E;
-    --background-lighter-shade: #1E88E5;
-    --button-text: #E3F2FD;
+    --background-darker-shade: #1a237e;
+    --background-lighter-shade: #1e88e5;
+    --button-text: #e3f2fd;
     --button-hover-text: #263238;
-    --button-hover: #64B5F6;
-    --button-focus-outline: #4B87B7;
+    --button-hover: #64b5f6;
+    --button-focus-outline: #4b87b7;
     --footer-background: #263238;
-    --footer-button-background: #546E7A;
+    --footer-button-background: #546e7a;
     --shadow: #050505;
-    --weather-button-background-color: #00695C;
-    --weather-button-border-color: #004D40;
+    --weather-button-background-color: #00695c;
+    --weather-button-border-color: #004d40;
     --weather-button-text-color: #ffffff;
 }

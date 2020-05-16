@@ -1,103 +1,88 @@
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <link
-      rel="stylesheet"
-      href="../styles/weather-styles.css"
-      type="text/css"
-    />
-    <link rel="stylesheet" href="../styles/index-styles.css" type="text/css" />
-    <link
-      rel="stylesheet"
-      href="../styles/hidden-footer-styles.css"
-      type="text/css"
-    />
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="../styles/weather-styles.css" />
+        <link rel="stylesheet" href="../styles/index-styles.css" />
+        <link rel="stylesheet" href="../styles/hidden-footer-styles.css" />
 
-    <link
-      rel="icon"
-      type="image/png"
-      href="../favicon-32x32.png"
-      sizes="32x32"
-    />
-    <title>Weather</title>
-  </head>
-  <body onload="ChangeTheme()">
-    <div class="background">
-      <div class="content">
-        <button id="palanga" class="js--weatherButton weather-button">
-          Palanga
-        </button>
-        <button id="siauliai" class="js--weatherButton weather-button">
-          Šiauliai
-        </button>
-        <button id="panevezys" class="js--weatherButton weather-button">
-          Panevėžys
-        </button>
-        <button id="rokiskis" class="js--weatherButton weather-button">
-          Rokiškis
-        </button>
-        <button id="ignalina" class="js--weatherButton weather-button">
-          Ignalina
-        </button>
-        <button id="klaipeda" class="js--weatherButton weather-button">
-          Klaipėda
-        </button>
-        <button id="kelme" class="js--weatherButton weather-button">
-          Kelmė
-        </button>
-        <button id="kedainiai" class="js--weatherButton weather-button">
-          Kėdainiai
-        </button>
-        <button id="moletai" class="js--weatherButton weather-button">
-          Molėtai
-        </button>
-        <button id="silute" class="js--weatherButton weather-button">
-          Šilutė
-        </button>
-        <button id="jurbarkas" class="js--weatherButton weather-button">
-          Jurbarkas
-        </button>
-        <button id="kaunas" class="js--weatherButton weather-button">
-          Kaunas
-        </button>
-        <button id="vilnius" class="js--weatherButton weather-button">
-          Vilnius
-        </button>
-        <button id="druskininkai" class="js--weatherButton weather-button">
-          Druski<wbr />ninkai
-        </button>
-      </div>
-    </div>
+        <link rel="icon" type="image/png" href="../favicon-32x32.png" sizes="32x32" />
+        <title>Weather</title>
+    </head>
+    <body onload="changeTheme()">
+        <div class="background">
+            <div class="content">
+                <button id="palanga" class="js--weatherButton weather-button">
+                    Palanga
+                </button>
+                <button id="siauliai" class="js--weatherButton weather-button">
+                    Šiauliai
+                </button>
+                <button id="panevezys" class="js--weatherButton weather-button">
+                    Panevėžys
+                </button>
+                <button id="rokiskis" class="js--weatherButton weather-button">
+                    Rokiškis
+                </button>
+                <button id="ignalina" class="js--weatherButton weather-button">
+                    Ignalina
+                </button>
+                <button id="klaipeda" class="js--weatherButton weather-button">
+                    Klaipėda
+                </button>
+                <button id="kelme" class="js--weatherButton weather-button">
+                    Kelmė
+                </button>
+                <button id="kedainiai" class="js--weatherButton weather-button">
+                    Kėdainiai
+                </button>
+                <button id="moletai" class="js--weatherButton weather-button">
+                    Molėtai
+                </button>
+                <button id="silute" class="js--weatherButton weather-button">
+                    Šilutė
+                </button>
+                <button id="jurbarkas" class="js--weatherButton weather-button">
+                    Jurbarkas
+                </button>
+                <button id="kaunas" class="js--weatherButton weather-button">
+                    Kaunas
+                </button>
+                <button id="vilnius" class="js--weatherButton weather-button">
+                    Vilnius
+                </button>
+                <button id="druskininkai" class="js--weatherButton weather-button">
+                    Druski<wbr />ninkai
+                </button>
+            </div>
+        </div>
 
-    <div class="modal" id="singleCityWeatherModal">
-      <img id="weatherIcon" />
-      <div id="description"></div>
-      <div id="temperature"></div>
-      <div id="feelsLikeTemperature"></div>
-      <div id="wind"></div>
-      <div id="location"></div>
-    </div>
-    <div class="modal" id="errorModal"></div>
-    <div id="overlay" onclick="CloseModal()"></div>
+        <div class="modal" id="singleCityWeatherModal">
+            <img id="weatherIcon" />
+            <div id="description"></div>
+            <div id="temperature"></div>
+            <div id="feelsLikeTemperature"></div>
+            <div id="wind"></div>
+            <div id="location"></div>
+        </div>
+        <div class="modal" id="errorModal"></div>
+        <div id="overlay" onclick="closeModal()"></div>
 
-    <div class="fake-footer"></div>
-    <footer>
-      <div class="footerContainer">
-        <a href="https://openweathermap.org/api">
-          Weather API
-        </a>
-        <a href="../index.html">
-          Home
-        </a>
-        <a
-          href="https://github.com/manifestinteractive/weather-underground-icons"
-        >
-          Weather Icons
-        </a>
-      </div>
-    </footer>
+        <div class="fake-footer"></div>
+        <footer>
+            <div class="footerContainer">
+                <a href="https://openweathermap.org/api">
+                    Weather API
+                </a>
+                <a href="../index.html">
+                    Home
+                </a>
+                <a href="https://github.com/manifestinteractive/weather-underground-icons">
+                    Weather Icons
+                </a>
+            </div>
+        </footer>
 
-    <script src="../script/weather script.js"></script>
-    <script src="../script/themes script.js"></script>
-  </body>
+        <script src="../script/weatherScript.js"></script>
+        <script src="../script/themesScript.js"></script>
+    </body>
 </html>

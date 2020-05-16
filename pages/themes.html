@@ -1,26 +1,25 @@
 <html>
     <head>
-        <meta charset="utf-8">
-        <script src="../script/themes script.js"></script>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="../styles/index-styles.css" />
+        <link rel="stylesheet" href="../styles/hidden-footer-styles.css" />
+        <link rel="stylesheet" href="../styles/root-variables.css" />
+        <link rel="stylesheet" href="../styles/themes-styles.css" />
 
-        <link rel="stylesheet" href="../styles/index-styles.css">
-        <link rel="stylesheet" href="../styles/hidden-footer-styles.css">
-        <link rel="stylesheet" href="../styles/root-variables.css">
-        <link rel="stylesheet" href="../styles/themes-styles.css">
+        <link rel="icon" type="image/png" href="../favicon-32x32.png" sizes="32x32" />
 
-        <link rel="icon" type="image/png" href="../favicon-32x32.png" sizes="32x32"/>
         <title>Themes</title>
     </head>
-    <body onload="ChangeTheme()">
+    <body onload="changeTheme()">
         <div class="all-content">
             <div class="menu">
-                <button class="ocean-button" onclick="SetTheme('ocean')">
+                <button class="ocean-button" onclick="setTheme('ocean')">
                     Ocean
                 </button>
-                <button class="dark-button" onclick="SetTheme('dark')">
+                <button class="dark-button" onclick="setTheme('dark')">
                     Dark
                 </button>
-                <button class="light-button" onclick="SetTheme('light')">
+                <button class="light-button" onclick="setTheme('light')">
                     Light
                 </button>
             </div>
@@ -39,5 +38,7 @@
                 </a>
             </div>
         </footer>
+
+        <script src="../script/themesScript.js"></script>
     </body>
 </html>

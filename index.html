@@ -1,16 +1,13 @@
 <html>
     <head>
-        <meta charset="utf-8">
-        <script src="script/index script.js"></script>
-        <script src="script/themes script.js"></script>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="styles/index-styles.css" />
+        <link rel="stylesheet" href="styles/hidden-footer-styles.css" />
 
-        <link rel="stylesheet" href="styles/index-styles.css">
-        <link rel="stylesheet" href="styles/hidden-footer-styles.css">
-
-        <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32"/>
+        <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
         <title>Hub</title>
     </head>
-    <body onload="ChangeTheme()">
+    <body onload="changeTheme()">
         <div class="all-content" id="allContent">
             <div class="menu">
                 <a href="pages/info page.html">
@@ -22,7 +19,7 @@
                 <a href="pages/weather.html">
                     Enter Weather
                 </a>
-                <img src="Scroll down.png" class="scrollDownArrow inverted" id="scrollArrow">
+                <img src="Scroll down.png" class="scrollDownArrow inverted" id="scrollArrow" />
             </div>
         </div>
         <div class="fake-footer"></div>
@@ -39,5 +36,8 @@
                 </a>
             </div>
         </footer>
+
+        <script src="script/indexScript.js"></script>
+        <script src="script/themesScript.js"></script>
     </body>
 </html>

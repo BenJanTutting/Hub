@@ -1,31 +1,30 @@
-@import "root-variables.css";
+@import 'root-variables.css';
 
 .ocean-button {
     background-color: #283593;
-    color: #E3F2FD;
+    color: #e3f2fd;
 }
 
-.ocean-button:hover{
+.ocean-button:hover {
     color: #263238;
 }
 
-.ocean-button::after{
-    background-color: #64B5F6;
+.ocean-button::after {
+    background-color: #64b5f6;
 }
 
-
 .light-button {
-    background-color: #FAFAFA;
+    background-color: #fafafa;
     color: #161616;
 }
 
 .light-button::after {
-    background-color: #BDBDBD;
+    background-color: #bdbdbd;
 }
 
-.dark-button{
-    background-color: #37474F;
-    color: #FAFAFA;
+.dark-button {
+    background-color: #37474f;
+    color: #fafafa;
 }
 
 .dark-button::after {
@@ -42,7 +41,7 @@ button {
     font-size: 18px;
     overflow: hidden;
     cursor: pointer;
-    transition: .35s;
+    transition: 0.35s;
     padding: 45px;
     margin-bottom: 10px;
     left: 50%;
@@ -60,7 +59,7 @@ button:hover::after {
 
 button::after {
     position: absolute;
-    transition: .35s;
+    transition: 0.35s;
     content: ' ';
     width: 0;
     top: 0;
